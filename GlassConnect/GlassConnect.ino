@@ -37,7 +37,7 @@ void setup() {
 
     if (!isConnectedToWifi()) {
         // Initialize BLE
-        BLEDevice::init("ESP32");
+        BLEDevice::init("GlassConnect"); // Set Bluetooth name here
         BLEServer *pServer = BLEDevice::createServer();
         pServer->setCallbacks(new MyServerCallbacks());
         BLEService *pService = pServer->createService(SERVICE_UUID);
